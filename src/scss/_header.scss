@@ -1,0 +1,30 @@
+@use "sass:map";
+
+.header {
+  padding: 1.6rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: map.get($colors, background-color);
+  font-size: 1.6rem;
+  font-family: $font-paragraph;
+
+  &_logo {
+    color: map.get($colors, font-color);
+  }
+
+  &_navigation {
+    display: flex;
+    gap: 3rem;
+
+    &--link {
+      text-decoration: none;
+      color: map.get($colors, font-color);
+
+      &:hover,
+      &:active {
+        color: map.get($colors, accent-color);
+      }
+    }
+  }
+}
