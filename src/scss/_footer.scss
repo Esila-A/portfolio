@@ -1,0 +1,25 @@
+@use "sass:map";
+
+.footer {
+  margin: 5rem 5rem 2rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &_copyright {
+    @include text;
+    font-size: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  &_links {
+    display: flex;
+    gap: 1rem;
+
+    &--icon {
+      color: map.get($colors, accent-color);
+      font-size: 1.5rem;
+    }
+  }
+}
