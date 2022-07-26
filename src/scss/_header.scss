@@ -21,10 +21,13 @@
       text-decoration: none;
       color: map.get($colors, font-color);
 
-      &:hover,
-      &:active {
+      &:hover {
         color: map.get($colors, accent-color);
       }
+    }
+
+    .active {
+      color: map.get($colors, accent-color);
     }
   }
 }
