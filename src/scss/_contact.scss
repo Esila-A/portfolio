@@ -1,0 +1,45 @@
+@use "sass:map";
+
+.contact {
+  padding: 0 5rem 7rem 5rem;
+  width: 100vw;
+
+  &_heading {
+    text-align: center;
+    @include heading;
+    font-size: 5rem;
+    padding: 5rem 0;
+  }
+
+  &_information {
+    display: flex;
+    justify-content: space-between;
+    @include text;
+
+    &--name {
+      font-size: 4rem;
+      padding-bottom: 5rem;
+    }
+
+    &--details {
+      display: flex;
+      align-items: center;
+      font-size: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    &--paragraph,
+    &--link {
+      padding-left: 2rem;
+    }
+
+    &--link {
+      color: map.get($colors, font-color);
+      text-decoration: none;
+    }
+
+    &--icon {
+      color: map.get($colors, accent-color);
+    }
+  }
+}

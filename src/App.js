@@ -21,7 +21,7 @@ function App() {
     <div className="app">
       <div
         className="app_background"
-        style={{ transform: `translateY(-${offsetY * 0.2}px)` }}
+        style={{ transform: `translateY(${offsetY * 0.2}px)` }}
       />
       <div className="app_components">
         <Header />

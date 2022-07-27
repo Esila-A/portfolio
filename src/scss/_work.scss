@@ -1,25 +1,30 @@
 @use "sass:map";
 
 .work {
-  padding: 7rem 5rem;
-  // background-color: map.get($colors, background-color);
+  padding: 7rem 5rem 13rem 5rem;
+  background-image: url(../images/pipe.png);
+  background-repeat: no-repeat;
+  background-size: 76vh;
+  background-position-x: 32vw;
+  background-position-y: 70vh;
 
   &_main {
     &--text {
     .heading {
         @include heading;
-        font-size: 7rem;
+        font-size: 6.5rem;
       }
     
       .paragraph {
         @include text;
         font-size: 3rem;
-        padding-bottom: 10rem;
+        padding: 1rem 0 10rem 0;
+        letter-spacing: .2rem;
       }
     
       .anchor {
         @include heading;
-        font-size: 5.5rem;
+        font-size: 5rem;
         text-decoration: none;
         padding-top: 3rem;
       }

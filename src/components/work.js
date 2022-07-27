@@ -20,6 +20,7 @@ const Work = () => {
         </div>
         <div className="work_main--face"></div>
       </div>
+
       <div className="work_websites">
         <div className="work_websites--screenshot">
           <img src={tlumaczenia} alt="website's screenshot" className="image"/>
