@@ -9,24 +9,129 @@
   background-position-y: 70vh;
 
   &_main {
+    display: flex;
+    justify-content: space-between;
+
     &--text {
-    .heading {
+      .heading {
         @include heading;
         font-size: 6.5rem;
       }
-    
+
       .paragraph {
         @include text;
         font-size: 3rem;
         padding: 1rem 0 10rem 0;
         letter-spacing: .2rem;
       }
-    
+
       .anchor {
         @include heading;
         font-size: 5rem;
         text-decoration: none;
-        padding-top: 3rem;
+        padding-top: 2rem;
+      }
+    }
+
+    &--animation {
+      animation-name: floating;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      margin-left: 30px;
+      margin-top: 5px;
+
+      @keyframes floating {
+        0% {
+          transform: translate(0, 0px);
+        }
+
+        50% {
+          transform: translate(0, 25px);
+        }
+
+        100% {
+          transform: translate(0, -px);
+        }
+      }
+
+            &:after {
+              content: "";
+              position: absolute;
+              top: 38%;
+              left: 31%;
+              border-radius: 50%;
+              width: 6rem;
+              height: 1.5rem;
+              border-left: .4rem solid transparent;
+              border-bottom: .4rem solid black;
+              border-right: .4rem solid transparent;
+              transform: rotate(-10deg);
+              background-color: transparent;
+            }
+
+      .face {
+        position: relative;
+        width: 30rem;
+        height: 30rem;
+        border-radius: 50%;
+        background: map.get($colors, accent-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        right: 3rem;
+        top: -3rem;
+        transform: rotate(-10deg);
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 37%;
+          left: 20%;
+          width: 3rem;
+          height: 3rem;
+          background: rgb(255, 255, 255);
+          border-radius: 50%;
+          z-index: 1;
+        }
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: 37%;
+          left: 77%;
+          width: 3rem;
+          height: 3rem;
+          background: rgb(255, 255, 255);
+          border-radius: 50%;
+          z-index: 1;
+        }
+
+        .eyes {
+          position: relative;
+          top: -20px;
+          display: flex;
+
+          .eye {
+            position: relative;
+            width: 7rem;
+            height: 7rem;
+            display: block;
+            background: #fff;
+            margin: 0 5rem;
+            border-radius: 50%;
+
+            &:after {
+              content: "";
+              position: absolute;
+              transform: translate(4%, 4%);
+              width: 5.7rem;
+              height: 5.7rem;
+              background: rgb(0, 0, 0);
+              border-radius: 50%;
+            }
+          }
+        }
       }
     }
   }

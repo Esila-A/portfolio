@@ -20,9 +20,18 @@ function App() {
   return (
     <div className="app">
       <div
-        className="app_background"
-        style={{ transform: `translateY(${offsetY * 0.2}px)` }}
+        className="app_background app_background--frame5"
+        style={{ transform: `translateY(-${offsetY * 0.3}px)` }}
       />
+      <div
+        className="app_background app_background--frame6"
+        style={{ transform: `translateY(-${offsetY * 0.2}px)` }}
+      />
+      <div
+        className="app_background app_background--frame7"
+        style={{ transform: `translateY(-${offsetY * 0.1}px)` }}
+      />
+
       <div className="app_components">
         <Header />
         <Routes>

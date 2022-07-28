@@ -10,12 +10,23 @@ html {
   background-color: map.get($colors, background-color);
   
   &_background {
-  background-image: url("../images/background.png");
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+
+    &--frame5 {
+      background-image: url("../images/Frame\ 5.png");
+    }
+
+    &--frame6 {
+      background-image: url("../images/Frame\ 6.png");
+    }
+
+    &--frame7 {
+      background-image: url("../images/Frame\ 7.png");
+    }
   }
 
   &_components {
