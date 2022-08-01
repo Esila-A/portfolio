@@ -1,6 +1,21 @@
 import photo from "../images/Kima.png"
 
 const About = () => {
+
+  let pPhoto = document.getElementById("photo");
+
+  document.addEventListener("scroll", function () {
+    // Get scroll position
+    let scrollPosition = window.pageYOffset;
+
+    // Calculate whether the scroll it 400px or not then set the opacity to face the header out
+    if (scrollPosition <= 400) {
+      pPhoto.style.opacity = 1 - scrollPosition / 400;
+    } else {
+      pPhoto.style.opacity = 0;
+    }
+  });
+
   return (
     <div className="about">
       <div className="about_main">
@@ -15,9 +30,8 @@ const About = () => {
             SKILLS & TOOLS
           </a>
         </div>
-        <img src={photo} className="about_main--photo" alt="profile photo"/>
+        <img src={photo} className="about_main--photo" id="photo" alt="profile photo" />
       </div>
-
       <div className="skills"></div>
     </div>
   );

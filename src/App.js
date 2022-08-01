@@ -20,16 +20,16 @@ function App() {
   return (
     <div className="app">
       <div
-        className="app_background app_background--frame5"
-        style={{ transform: `translateY(-${offsetY * 0.3}px)` }}
+        className="app_background app_background--closest"
+        style={{ backgroundPositionY: `${offsetY * 0.1}px` }}
       />
       <div
-        className="app_background app_background--frame6"
-        style={{ transform: `translateY(-${offsetY * 0.2}px)` }}
+        className="app_background app_background--middle"
+        style={{ backgroundPositionY: `${offsetY * 0.02}px` }}
       />
       <div
-        className="app_background app_background--frame7"
-        style={{ transform: `translateY(-${offsetY * 0.1}px)` }}
+        className="app_background app_background--furthest"
+        style={{ backgroundPositionY: `${offsetY * 0.1}px` }}
       />
 
       <div className="app_components">

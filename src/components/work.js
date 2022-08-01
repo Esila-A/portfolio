@@ -2,6 +2,14 @@ import tlumaczenia from "../images/tlumaczenia.png";
 import serlo from "../images/serlo.png";
 import oddam from "../images/oddam.png";
 import elsi from "../images/elsi.png";
+import html from "../images/html.svg";
+import css from "../images/css.svg";
+import js from "../images/js.svg";
+import sass from "../images/sass.svg";
+import react from "../images/react.svg";
+import firebase from "../images/firebase.svg";
+import scrum from "../images/scrum.svg";
+import git from "../images/git.svg";
 
 document.querySelector("body").addEventListener("mousemove", eyeball);
 function eyeball(event) {
@@ -45,26 +53,82 @@ const Work = () => {
           <img src={tlumaczenia} alt="website's screenshot" className="image" />
         </div>
         <div className="work_websites--info">
-          <h3>TŁUMACZENIA-A-WAGNER</h3>
+          <a
+            href="https://tlumaczenia-a-wagner.pl/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            TŁUMACZENIA-A-WAGNER
+          </a>
           <p>Professional translator</p>
-          <h4>Technologies used</h4>
-          <ul>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>CSS/Sass</li>
-          </ul>
+          <h4>
+            About <span>(detailed description on GitHub)</span>
+          </h4>
+          <p className="about-website">
+            This is my first website for the real client. I was asked to write
+            and also design it. I went with minimalistic, toned-down style. As
+            for the code, it was pretty straight forward. The most challenging
+            part was adding reCaptcha as it was my first time using it.
+          </p>
+          <div className="technologies-and-links">
+            <div className="technologies">
+              <img src={html} className="technologies_icon" />
+              <img src={css} className="technologies_icon" />
+              <img src={sass} className="technologies_icon" />
+              <img src={js} className="technologies_icon" />
+              <img src={react} className="technologies_icon" />
+            </div>
+            <div>
+              <a
+                href="https://github.com/Esila-A/Aleksandra_Wagner--Website"
+                className="links" target="_blank"
+            rel="noreferrer"
+              >
+                GitHub
+              </a>
+              <a href="https://tlumaczenia-a-wagner.pl/" className="links" target="_blank"
+            rel="noreferrer">
+                Live
+              </a>
+            </div>
+          </div>
         </div>
       </div>
       <div className="work_websites">
         <div className="work_websites--info">
-          <h3>SERLO</h3>
+          <a href="https://serlo.pl/" target="_blank" rel="noreferrer">
+            SERLO
+          </a>
           <p>Renovation and finishing</p>
-          <h4>Technologies used</h4>
-          <ul>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>CSS/Sass</li>
-          </ul>
+          <h4>
+            About <span>(detailed description on GitHub)</span>
+          </h4>
+          <p className="about-website">
+            This is a website for my second real client. Although code-wise it's
+            not very complicated, it took me quite a long time to finish. I wasn't provided with any design ideas, copywriting text etc. Coming up with those things alongside the reaserch I had to do prior took me most of the time. 
+          </p>
+          <div className="technologies-and-links">
+            <div className="technologies">
+              <img src={html} className="technologies_icon" />
+              <img src={css} className="technologies_icon" />
+              <img src={sass} className="technologies_icon" />
+              <img src={js} className="technologies_icon" />
+              <img src={react} className="technologies_icon" />
+            </div>
+            <div>
+              <a
+                href="https://github.com/Esila-A/serlo-website-2"
+                className="links" target="_blank"
+            rel="noreferrer"
+              >
+                GitHub
+              </a>
+              <a href="https://serlo.pl/" className="links" target="_blank"
+            rel="noreferrer">
+                Live
+              </a>
+            </div>
+          </div>
         </div>
         <div className="work_websites--screenshot">
           <img src={serlo} alt="website's screenshot" className="image" />
@@ -75,28 +139,69 @@ const Work = () => {
           <img src={oddam} alt="website's screenshot" className="image" />
         </div>
         <div className="work_websites--info">
-          <h3>ODDAJ RZECZY</h3>
+          <a href="" target="_blank" rel="noreferrer">
+            ODDAJ RZECZY
+          </a>
           <p>Helping those in need</p>
-          <h4>Technologies used</h4>
-          <ul>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>CSS/Sass</li>
-            <li>Firebase Database</li>
-          </ul>
+          <h4>
+            About <span>(detailed description on GitHub)</span>
+          </h4>
+          <p className="about-website">This is a project done for my bootcamp's PortfolioLab. I was provided with a design. There were three major difficulties I had to overcome: pagination, log up / log in implementation (using Firebase) and changing website's options depending on user's status. The last one was defienetly the hardest. </p>
+          <div className="technologies-and-links">
+            <div className="technologies">
+              <img src={html} className="technologies_icon" />
+              <img src={css} className="technologies_icon" />
+              <img src={sass} className="technologies_icon" />
+              <img src={js} className="technologies_icon" />
+              <img src={react} className="technologies_icon" />
+              <img src={firebase} className="technologies_icon" />
+            </div>
+            <div>
+              <a
+                href="https://github.com/Esila-A/oddam-rzeczy-project"
+                className="links" target="_blank"
+            rel="noreferrer"
+              >
+                GitHub
+              </a>
+              <a href="" className="links" target="_blank"
+            rel="noreferrer">
+                Live
+              </a>
+            </div>
+          </div>
         </div>
       </div>
       <div className="work_websites">
         <div className="work_websites--info">
-          <h3>ELSI ADAJEW PHOTO</h3>
+          <a href="" target="_blank" rel="noreferrer">
+            ELSI ADAJEW PHOTO
+          </a>
           <p>Amateur photographer</p>
-          <h4>Technologies used</h4>
-          <ul>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>CSS/Sass</li>
-            <li>Firebase Storage</li>
-          </ul>
+          <h4>
+            About <span>(detailed description on GitHub)</span>
+          </h4>
+          <p className="about-website">This is my first ever full website. It was done as final project of my bootcamp. This was also my first time of designing, which I found very entertaining. The hardest parts of writing this website were working with React Router and connecting it to Firebase Storage.</p>
+          <div className="technologies-and-links">
+            <div className="technologies">
+              <img src={html} className="technologies_icon" />
+              <img src={css} className="technologies_icon" />
+              <img src={sass} className="technologies_icon" />
+              <img src={js} className="technologies_icon" />
+              <img src={react} className="technologies_icon" />
+              <img src={firebase} className="technologies_icon" />
+            </div>
+            <div>
+              <a href="" className="links" target="_blank"
+            rel="noreferrer">
+                GitHub
+              </a>
+              <a href="" className="links" target="_blank"
+            rel="noreferrer">
+                Live
+              </a>
+            </div>
+          </div>
         </div>
         <div className="work_websites--screenshot">
           <img src={elsi} alt="website's screenshot" className="image" />

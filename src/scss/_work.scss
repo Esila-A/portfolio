@@ -11,6 +11,7 @@
   &_main {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     &--text {
       .heading {
@@ -34,26 +35,20 @@
     }
 
     &--animation {
-      animation-name: floating;
-      animation-duration: 3s;
-      animation-iteration-count: infinite;
-      animation-timing-function: ease-in-out;
-      margin-left: 30px;
-      margin-top: 5px;
+      animation: circle 20s ease-in-out infinite alternate;
 
-      @keyframes floating {
-        0% {
-          transform: translate(0, 0px);
-        }
+      // @keyframes circle {
+      //   from {transform: rotate(0deg) translateX(20px) rotate(0deg);}
+      //   to {transform: rotate(360deg) translateX(20px) rotate(-360deg);}
+      // }
 
-        50% {
-          transform: translate(0, 25px);
-        }
-
-        100% {
-          transform: translate(0, -px);
-        }
-      }
+            @keyframes circle {
+              @for $i from 1 through 20 {
+                #{($i *10%)} {
+                  transform: translate3d((random(5) * 10px), (random(5) * 10px), (random(5) * 10px));
+                }
+              }
+            }
 
             &:after {
               content: "";
@@ -155,35 +150,55 @@
     }
 
     &--info {
-      h3 {
+      a {
         @include heading;
         font-size: 3rem;
         letter-spacing: -.2rem;
         justify-self: left;
-        margin-bottom: 1rem;
+        margin-bottom: .5rem;
+        text-decoration: none;
       }
 
       h4 {
         @include heading;
         font-size: 2.2rem;
         letter-spacing: normal;
-        margin-bottom: .5rem;
+        margin: 2rem 0 .5rem 0;
+
+        span {
+          font-size: .9rem;
+        }
       }
 
       p {
         @include text;
         font-size: 2rem;
-        margin-bottom: 5rem;
+        margin-bottom: 2rem;
       }
 
-      ul {
-        @include text;
-        font-size: 1.8rem;
+      .about-website {
+        font-size: 1.5rem;
+      }
 
-        li {
-          margin-bottom: .3rem;
-          list-style: disc;
-          margin-left: 2rem;
+      .technologies-and-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        .technologies {
+          display: flex;
+          align-items: center;
+          gap: 2rem;
+
+          &_icon {
+            height: 2rem;
+          }
+        }
+
+        .links {
+          font-size: 1.5rem;
+          letter-spacing: normal;
+          margin-left: 1.5rem;
         }
       }
     }
