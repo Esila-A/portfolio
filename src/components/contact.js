@@ -3,6 +3,7 @@ import {FaLinkedinIn} from "react-icons/fa";
 import {FaGithub} from "react-icons/fa";
 
 import Form from "./form";
+import Face from "./face";
 
 const Contact = () => {
   const emailIcon = <GrMail className="contact_information--icon" />;
@@ -46,6 +47,7 @@ const Contact = () => {
         </div>
         <Form />
       </div>
+      <Face className="contact_face" />
     </div>
   );
 }

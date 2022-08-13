@@ -8,20 +8,7 @@ import js from "../images/js.svg";
 import sass from "../images/sass.svg";
 import react from "../images/react.svg";
 import firebase from "../images/firebase.svg";
-import scrum from "../images/scrum.svg";
-import git from "../images/git.svg";
-
-document.querySelector("body").addEventListener("mousemove", eyeball);
-function eyeball(event) {
-  let eye = document.querySelectorAll(".eye");
-  eye.forEach(function (eye) {
-    let x = eye.getBoundingClientRect().left + eye.clientWidth / 2;
-    let y = eye.getBoundingClientRect().top + eye.clientHeight / 2;
-    let radian = Math.atan2(event.pageX - x, event.pageY - y);
-    let rot = radian * (180 / Math.PI) * -1 + 240;
-    eye.style.transform = "rotate(" + rot + "deg)";
-  });
-}
+import Face from "./face";
 
 const Work = () => {
   return (
@@ -38,14 +25,7 @@ const Work = () => {
             SELECTED WORK
           </a>
         </div>
-        <div className="work_main--animation">
-          <div class="face">
-            <div class="eyes">
-              <div class="eye"></div>
-              <div class="eye"></div>
-            </div>
-          </div>
-        </div>
+        <Face />
       </div>
 
       <div className="work_websites">
@@ -65,10 +45,10 @@ const Work = () => {
             About <span>(detailed description on GitHub)</span>
           </h4>
           <p className="about-website">
-            This is my first website for the real client. I was asked to write
-            and also design it. I went with minimalistic, toned-down style. As
-            for the code, it was pretty straight forward. The most challenging
-            part was adding reCaptcha as it was my first time using it.
+            This is my first website for a real client. I was asked to both write
+            and design it. I went for a minimalistic, toned-down style. As
+            for the code, it was pretty straightforward. The most challenging
+            part was adding reCaptcha to the website, since it was my first time using it.
           </p>
           <div className="technologies-and-links">
             <div className="technologies">
@@ -104,8 +84,8 @@ const Work = () => {
             About <span>(detailed description on GitHub)</span>
           </h4>
           <p className="about-website">
-            This is a website for my second real client. Although code-wise it's
-            not very complicated, it took me quite a long time to finish. I wasn't provided with any design ideas, copywriting text etc. Coming up with those things alongside the reaserch I had to do prior took me most of the time. 
+            This website is for my second real client. Although code-wise it's
+            not very complicated, it took me quite a long time to finish. I wasn't provided with any design ideas, copywriting text etc. Deveoping these aspects of it, alongside the reaserch I had to do prior, took the longest. 
           </p>
           <div className="technologies-and-links">
             <div className="technologies">
@@ -146,7 +126,7 @@ const Work = () => {
           <h4>
             About <span>(detailed description on GitHub)</span>
           </h4>
-          <p className="about-website">This is a project done for my bootcamp's PortfolioLab. I was provided with a design. There were three major difficulties I had to overcome: pagination, log up / log in implementation (using Firebase) and changing website's options depending on user's status. The last one was defienetly the hardest. </p>
+          <p className="about-website">This is a project done for my bootcamp's PortfolioLab. I was provided with a design for it. Three major difficulties I had to overcome were: pagination, log up / log in implementation and changing the website's options depending on the user's status. The latter was definitely the hardest one. </p>
           <div className="technologies-and-links">
             <div className="technologies">
               <img src={html} className="technologies_icon" />
@@ -181,7 +161,7 @@ const Work = () => {
           <h4>
             About <span>(detailed description on GitHub)</span>
           </h4>
-          <p className="about-website">This is my first ever full website. It was done as final project of my bootcamp. This was also my first time of designing, which I found very entertaining. The hardest parts of writing this website were working with React Router and connecting it to Firebase Storage.</p>
+          <p className="about-website">This is my first ever website. It was done as the final project of my bootcamp. This was also my first time designing one, which I ended up finding very entertaining. The hardest parts of writing this website were working with React Router and connecting it to Firebase Storage.</p>
           <div className="technologies-and-links">
             <div className="technologies">
               <img src={html} className="technologies_icon" />

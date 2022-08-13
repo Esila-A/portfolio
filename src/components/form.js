@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { send } from "@emailjs/browser";
+import { hover } from "@testing-library/user-event/dist/hover";
 // import {
 //   GoogleReCaptchaProvider,
 //   useGoogleReCaptcha,
@@ -77,51 +78,52 @@ const Form = () => {
 
   return (
     // <GoogleReCaptchaProvider reCaptchaKey="6LfxQt0fAAAAAAWbGJoDNtHG8sXBUYvvsOS6pjt3">
-      <form ref={form} id="form" className="form" onSubmit={handleSubmit}>
-        <label className="form_requests">
-          <p className="form_requests--text">Name</p>
-          <input
-            type="text"
-            name="name"
-            placeholder="your name"
-            value={inputs.name}
-            onChange={handleChange}
-            className="form_requests--input one"
-            required={true}
-          />
-        </label>
-        <label className="form_requests">
-          <p className="form_requests--text">Email</p>
-          <input
-            type="email"
-            name="email"
-            placeholder="your email"
-            value={inputs.email}
-            onChange={handleChange}
-            className="form_requests--input one"
-            required={true}
-          />
-        </label>
-        <label className="form_requests">
-          <p className="form_requests--text">Message</p>
-          <textarea
-            name="message"
-            placeholder="your message"
-            value={inputs.message}
-            onChange={handleChange}
-            className="form_requests--input two"
-            required={true}
-          />
-        </label>
-        {!notice ? <SubmitButton /> : ""}
-        {notice === "success" ? <p className="positive">SENT!</p> : ""}
-        {notice === "error" ? (
-          <button className="negative" onClick={handleSubmit}>
-            SOMETHING WENT WRONG... TRY AGAIN!
-          </button>
-          ) : ("")
-        }
-      </form>
+    <form ref={form} id="form" className="form" onSubmit={handleSubmit}>
+      <label className="form_requests">
+        <p className="form_requests--text">Name</p>
+        <input
+          type="text"
+          name="name"
+          placeholder="your name"
+          value={inputs.name}
+          onChange={handleChange}
+          className="form_requests--input one"
+          required={true}
+        />
+      </label>
+      <label className="form_requests">
+        <p className="form_requests--text">Email</p>
+        <input
+          type="email"
+          name="email"
+          placeholder="your email"
+          value={inputs.email}
+          onChange={handleChange}
+          className="form_requests--input one"
+          required={true}
+        />
+      </label>
+      <label className="form_requests">
+        <p className="form_requests--text">Message</p>
+        <textarea
+          name="message"
+          placeholder="your message"
+          value={inputs.message}
+          onChange={handleChange}
+          className="form_requests--input two"
+          required={true}
+        />
+      </label>
+      {!notice ? <SubmitButton /> : ""}
+      {notice === "success" ? <p className="positive">SENT!</p> : ""}
+      {notice === "error" ? (
+        <button className="negative" onClick={handleSubmit}>
+          SOMETHING WENT WRONG... TRY AGAIN!
+        </button>
+      ) : (
+        ""
+      )}
+    </form>
     // </GoogleReCaptchaProvider>
   );
 };

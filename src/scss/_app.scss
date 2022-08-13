@@ -9,9 +9,12 @@ html {
   justify-content: center;
   background-color: map.get($colors, background-color);
   position: relative;
+  overflow-x: hidden;
+  // overflow-y: hidden;
   
   &_background {
-    width: 100%;
+    width: 102%;
+    // height: 105%;
     background-size: cover;
     position: absolute;
     top: 0;
@@ -37,4 +40,5 @@ html {
 
 ::-webkit-scrollbar {
   width: 0px;
+  height: 0px;
 }
