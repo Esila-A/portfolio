@@ -11,27 +11,50 @@ import { useEffect } from "react";
 
 const About = () => {
 
-  // PHOTO ANIMATION //
-  function animatePhoto(pPhoto) {
+  // PHOTO ANIMATION SETTINGS//
+  // function animatePhoto(pPhoto) {
+  //   document.addEventListener("scroll", function () {
+  //     let scrollPosition = window.pageYOffset;
+  //     if (scrollPosition <= 400) {
+  //       pPhoto.style.opacity = 1 - scrollPosition / 400;
+  //     } else {
+  //       pPhoto.style.opacity = 0;
+  //     }
+  //   });
+  // }
+
+    function animatePhoto(pPhoto) {
     document.addEventListener("scroll", function () {
-      let scrollPosition = window.pageYOffset;
-      if (scrollPosition <= 400) {
-        pPhoto.style.opacity = 1 - scrollPosition / 400;
-      } else {
-        pPhoto.style.opacity = 0;
-      }
+        pPhoto.style.height = 50 - window.pageYOffset / 20 + "rem";
     });
   }
 
+  // ICONS ANIMATION SETTINGS//
   const scrollObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((e) => {
         if (e.intersectionRatio === 1) animateIcons();
       });
     },
-    { root: null, rootMargin: "0px", threshold: 1 }
+    { root: null, rootMargin: "400px", threshold: 1 }
   );
 
+  function animateIcons() {
+    const iconOne = document.querySelectorAll(".iteration-one");
+    const iconTwo = document.querySelectorAll(".iteration-two");
+    const iconThree = document.querySelectorAll(".iteration-three");
+    const iconFour = document.querySelectorAll(".iteration-four");
+
+    const allIcons = [iconOne, iconTwo, iconThree, iconFour];
+
+    allIcons.forEach((iconSet, i) => {
+      setTimeout(() => {
+        iconSet.forEach((icon) => icon.classList.remove("unanimated-icon"));
+      }, 100 * i);
+    });
+  }
+
+  // CALLING BOTH ANIMATIONS //
   useEffect(() => {
     const iconContainer = document.querySelector("#icons");
     scrollObserver.observe(iconContainer);
@@ -39,22 +62,6 @@ const About = () => {
     animatePhoto(pPhoto);
   }, []);
 
-  function animateIcons() {
-    const iconsOne = document.querySelectorAll(".iteration-one");
-    const iconsTwo = document.querySelectorAll(".iteration-two");
-    const iconsThree = document.querySelectorAll(".iteration-three");
-    const iconsFour = document.querySelectorAll(".iteration-four");
-
-    const allIcons = [iconsOne, iconsTwo, iconsThree, iconsFour];
-
-    console.log(allIcons);
-
-    allIcons.forEach((iconSet, i) => {
-      setTimeout(() => {
-        iconSet.forEach((icon) => icon.classList.remove("unanimated-icon"));
-      }, 150 * i);
-    });
-  }
 
   return (
     <div className="about">

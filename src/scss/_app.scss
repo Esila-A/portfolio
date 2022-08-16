@@ -10,11 +10,9 @@ html {
   background-color: map.get($colors, background-color);
   position: relative;
   overflow-x: hidden;
-  // overflow-y: hidden;
   
   &_background {
     width: 102%;
-    // height: 105%;
     background-size: cover;
     position: absolute;
     top: 0;
