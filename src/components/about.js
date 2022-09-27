@@ -1,31 +1,21 @@
 import photo from "../images/Kima.png";
-import html from "../images/html.svg";
-import css from "../images/css.svg";
-import js from "../images/js.svg";
-import sass from "../images/sass.svg";
-import react from "../images/react.svg";
-import firebase from "../images/firebase.svg";
-import scrum from "../images/scrum.svg";
-import git from "../images/git.svg";
+import html from "../images/html.png";
+import css from "../images/css.png";
+import js from "../images/js.png";
+import sass from "../images/sass.png";
+import react from "../images/react.png";
+import firebase from "../images/firebase.png";
+import scrum from "../images/scrum.png";
+import git from "../images/git.png";
+import rwd from "../images/rwd.png";
 import { useEffect } from "react";
 
 const About = () => {
 
   // PHOTO ANIMATION SETTINGS//
-  // function animatePhoto(pPhoto) {
-  //   document.addEventListener("scroll", function () {
-  //     let scrollPosition = window.pageYOffset;
-  //     if (scrollPosition <= 400) {
-  //       pPhoto.style.opacity = 1 - scrollPosition / 400;
-  //     } else {
-  //       pPhoto.style.opacity = 0;
-  //     }
-  //   });
-  // }
-
-    function animatePhoto(pPhoto) {
+  function animatePhoto(pPhoto) {
     document.addEventListener("scroll", function () {
-        pPhoto.style.height = 50 - window.pageYOffset / 20 + "rem";
+      pPhoto.style.width = 42 - window.pageYOffset / 20 + "vw";
     });
   }
 
@@ -44,13 +34,14 @@ const About = () => {
     const iconTwo = document.querySelectorAll(".iteration-two");
     const iconThree = document.querySelectorAll(".iteration-three");
     const iconFour = document.querySelectorAll(".iteration-four");
+    const iconFive = document.querySelectorAll(".iteration-five");
 
-    const allIcons = [iconOne, iconTwo, iconThree, iconFour];
+    const allIcons = [iconOne, iconTwo, iconThree, iconFour, iconFive];
 
     allIcons.forEach((iconSet, i) => {
       setTimeout(() => {
         iconSet.forEach((icon) => icon.classList.remove("unanimated-icon"));
-      }, 100 * i);
+      }, 150 * i);
     });
   }
 
@@ -69,11 +60,10 @@ const About = () => {
         <div className="about_main--text">
           <h1 className="heading">WHO AM I?</h1>
           <p className="paragraph">
-            My name is Esila Adajewa. I'm a front-end developer
-            <br />
-            living in Poland. I enjoy creating clean, minimalistic
-            <br />
-            websites that are both user and search engine friendly.
+            My name is Esila Adajewa. I'm a starting front-end developer. I
+            enjoy creating clean, minimalistic and user friendly websites. Both
+            designig and writing them are exciting. In free time I enjoy
+            drawing, watching shows on Netflix and spending time with my family.
           </p>
           <a href="#about" id="about" className="anchor">
             SKILLS & TOOLS
@@ -88,10 +78,20 @@ const About = () => {
       </div>
       <div className="about_skills">
         <p className="about_skills--text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nobis
-          optio ducimus voluptas atque impedit, culpa esse velit deserunt rem
-          asperiores voluptates quam aliquid omnis ad cupiditate totam
-          distinctio tenetur?
+          My skills and tools are made up of those listed <span className="for-computer">beside</span>
+          <span className="for-mobile">above</span>. As I am only a few months
+          into my programming adventure, in all honesty, my level of knowledge
+          and experience are not very high. However, I have used these skills
+          and tools during and after my fornt-end developer bootcamp at
+          CodersLab IT School, so I know that I am able to learn and develop
+          them.
+          <br />
+          <br />
+          All of them, except Firebase and Scrum, are used by me on daily basis.
+          Firebase I only used twice, for my two bootcamp projects.
+          <br /><br/>
+          As for Scrum, we had a week dedicated to this methodology where we had
+          to work in a group on one project using it.
         </p>
         <div className="about_skills--icons icons" id="icons">
           <div className="about_skills--icon unanimated-icon iteration-one">
@@ -125,6 +125,10 @@ const About = () => {
           <div className="about_skills--icon unanimated-icon iteration-three">
             <img src={scrum} className="img" />
             <p className="p">SCRUM</p>
+          </div>
+          <div className="about_skills--icon unanimated-icon iteration-five">
+            <img src={rwd} className="img" />
+            <p className="p">RWD</p>
           </div>
         </div>
       </div>

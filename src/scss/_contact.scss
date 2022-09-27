@@ -2,14 +2,14 @@
 
 
 .contact {
-  padding: 0 5rem 7rem 5rem;
+  padding: 0 4.8vw 8% 4.8vw;
   width: 100vw;
 
   &_heading {
     text-align: center;
     @include heading;
-    font-size: 5rem;
-    padding: 5rem 0;
+      font-size: 6.3vw;
+      padding: 6% 0;
   }
 
   &_information {
@@ -17,21 +17,25 @@
     justify-content: space-between;
     @include text;
 
+    .for-mobile {
+      display: none;
+    }
+
     &--name {
-      font-size: 4rem;
-      padding-bottom: 5rem;
+      font-size: 3.9vw;
+      padding-bottom: 20%;
     }
 
     &--details {
       display: flex;
       align-items: center;
-      font-size: 2rem;
-      padding-bottom: 2rem;
+      font-size: 2vw;
+      padding-bottom: 8%;
     }
 
     &--paragraph,
     &--link {
-      padding-left: 2rem;
+      padding-left: 1.8vw;
     }
 
     &--link {
@@ -43,98 +47,159 @@
       color: map.get($colors, accent-color);
     }
   }
-            .animation {
-              animation: circle 18s ease-in-out infinite alternate;
-              height: 1rem;      
-              // @keyframes circle {
-              //   from {transform: rotate(0deg) translateX(20px) rotate(0deg);}
-              //   to {transform: rotate(360deg) translateX(20px) rotate(-360deg);}
-              position: relative;
-              left: 21rem;
-              bottom: 19rem;
-      
-              @keyframes circle {
-                @for $i from 1 through 20 {
-                  #{($i *10%)} {
-                    transform: translate3d((random(5) * 10px), (random(5) * 10px), (random(5) * 10px));
-                  }
-                }
-              }
-      
-              &:after {
-                content: "";
-                position: absolute;
-                top: 9.5rem;
-                left: 8rem;
-                border-radius: 50%;
-                width: 4rem;
-                height: 1rem;
-                border-left: .4rem solid transparent;
-                border-bottom: .4rem solid black;
-                border-right: .4rem solid transparent;
-                transform: rotate(5deg);
-                background-color: transparent;
-              }
-      
-              .face {
-                width: 20rem;
-                height: 20rem;
-                border-radius: 50%;
-                background: map.get($colors, accent-color);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                transform: rotate(5deg);
-      
-                &:after {
-                  content: "";
-                  position: absolute;
-                  top: 35%;
-                  left: 22%;
-                  width: 2rem;
-                  height: 2rem;
-                  background: rgb(255, 255, 255);
-                  border-radius: 50%;
-                  z-index: 1;
-                }
-      
-                &:before {
-                  content: "";
-                  position: absolute;
-                  top: 35%;
-                  left: 79%;
-                  width: 2rem;
-                  height: 2rem;
-                  background: rgb(255, 255, 255);
-                  border-radius: 50%;
-                  z-index: 1;
-                }
-      
-                .eyes {
-                  position: relative;
-                  top: -20px;
-                  display: flex;
-      
-                  .eye {
-                    position: relative;
-                    width: 5rem;
-                    height: 5rem;
-                    display: block;
-                    background: #fff;
-                    margin: 0 3.2rem;
-                    border-radius: 50%;
-      
-                    &:after {
-                      content: "";
-                      position: absolute;
-                      transform: translate(4%, 4%);
-                      width: 4rem;
-                      height: 4rem;
-                      background: rgb(0, 0, 0);
-                      border-radius: 50%;
-                    }
-                  }
-                }
-              }
-            }
+
+  .animation {
+    animation: circle 18s ease-in-out infinite alternate;
+    position: relative;
+    left: -4vw;
+    top: 12vw;
+    width: calc(100vw / 5.3);
+    height: calc(100vw / 5.3);
+
+    @keyframes circle {
+      @for $i from 1 through 20 {
+        #{($i *10%)} {
+          transform: translate3d((random(5) * 10px), (random(5) * 10px), (random(5) * 10px));
+        }
+      }
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: calc(100% - (50% + 1.9vw));
+      top: calc(100% - (50% + 0.5rem));
+      border-radius: 50%;
+      width: 3.8vw;
+      height: 1rem;
+      border-left: .4rem solid transparent;
+      border-bottom: .4rem solid black;
+      border-right: .4rem solid transparent;
+      transform: rotate(5deg);
+      background-color: transparent;
+    }
+
+    .face {
+      border-radius: 50%;
+      background: map.get($colors, accent-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: rotate(5deg);
+      width: calc(100vw / 5.3);
+      height: calc(100vw / 5.3);
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 35%;
+        left: 22%;
+        width: calc(100vw / 53);
+        height: calc(100vw / 53);
+        background: rgb(255, 255, 255);
+        border-radius: 50%;
+        z-index: 1;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 35%;
+        left: 79%;
+        width: calc(100vw / 53);
+        height: calc(100vw / 53);
+        background: rgb(255, 255, 255);
+        border-radius: 50%;
+        z-index: 1;
+      }
+
+      .eyes {
+        position: relative;
+        top: -20px;
+        display: flex;
+
+        .eye {
+          position: relative;
+          width: calc(100vw / 21.3);
+          height: calc(100vw / 21.3);
+          display: block;
+          background: #fff;
+          margin: 0 3vw;
+          border-radius: 50%;
+
+          &:after {
+            content: "";
+            position: absolute;
+            transform: translate(4%, 4%);
+            width: calc(100vw / 27);
+            height: calc(100vw / 27);
+            background: rgb(0, 0, 0);
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 792px) {
+  .contact {
+    padding: 0 4.8vw 0 4.8vw;
+    width: 100vw;
+
+    &_heading {
+      text-align: center;
+      @include heading;
+      font-size: 14vw;
+      padding: 6% 0;
+    }
+
+    &_information {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include text;
+      padding: 3% 0 10%;
+
+      .for-computer {
+        display: none;
+      }
+
+      .for-mobile {
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      &--name {
+        font-size: 8vw;
+        padding-bottom: 6%;
+      }
+
+      &--details {
+        display: flex;
+        align-items: center;
+        font-size: 5vw;
+        padding-bottom: 10%;
+      }
+
+      &--paragraph,
+      &--link {
+        padding-left: 1.8vw;
+      }
+
+      &--link {
+        color: map.get($colors, font-color);
+        text-decoration: none;
+      }
+
+      &--icon {
+        color: map.get($colors, accent-color);
+        font-size: 6vw;
+      }
+    }
+
+    .animation {
+      display: none;
+    }
+  }
 }

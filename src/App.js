@@ -61,7 +61,7 @@ function App() {
       <div className="app_components">
         <Header />
         <Routes>
-          <Route path="/" element={<Work />} />
+          <Route path="/" element={<Work />} className="home-path"/>
           <Route path="work" element={<Work />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />

@@ -40,3 +40,13 @@ html {
   width: 0px;
   height: 0px;
 }
+
+
+@media (max-width: 792px) {
+  .app {  
+
+    &_background {
+      display: none;
+    }
+  }
+}

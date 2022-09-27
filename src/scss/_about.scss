@@ -1,78 +1,183 @@
 .about {
-  padding: 3rem 0 10rem 5rem;
-  width: 100vw;
+  padding: 7% 0 8% 4.8vw;
 
   &_main {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 5rem;
+    padding-bottom: 5%;
 
     &--text {
-      padding-top: 4rem;
+      // padding-top: 4%;
+      
       .heading {
         @include heading;
-        font-size: 6.5rem;
+        font-size: 6.3vw;
       }
 
       .paragraph {
         @include text;
-        font-size: 2rem;
-        padding: 1rem 0 10rem 0;
+        font-size: 1.8vw;
+        padding: 2.5% 0 8.75% 0;
+        width: 45vw
       }
 
       .anchor {
         @include heading;
-        font-size: 6.5rem;
+        font-size: 4.7vw;
         text-decoration: none;
-        padding-top: 3rem;
+        padding-top: 6%;
       }
     }
 
     &--photo {
-      height: 50rem;
+      width: 42vw;
       position: absolute;
       right: 0;
+      top: 9%;
+      transition: all ease-in-out;
     }
   }
 
   &_skills {
-    padding-right: 8rem;
+    padding-right: 7.5vw;
     display: flex;
     justify-content: space-between;
     z-index: 1;
 
     &--text {
       @include text;
-      font-size: 1.5rem;
+      font-size: 1.7vw;
       width: 50%;
+
+      .for-mobile {
+        display: none;
+      }
     }
 
     &--icons {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-auto-rows: minmax(100px, auto);
-      gap: 4rem;
-      justify-items: center;
+      gap: 4vw 6vw;
     }
 
     &--icon {
-      text-align: center;
-      position: relative;
-      transition: .4s ease-in all;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: .4s ease-in all;
+        position: relative;
 
-      img {
-        height: 6rem;
+      .img {
+        width: 5.3vw;
       }
 
       p {
         @include text;
-        font-size: 1.5rem;
+        font-size: 1.3vw;
         padding-top: .5rem;
       }
     }
 
     .unanimated-icon {
       transform: translate(700px, 0);
+    }
+  }
+
+    @media (max-width: 792px) {
+        padding: 3% 4.8vw 10% 4.8vw;
+
+      &_main {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 5%;
+      padding-top: 4%;
+
+      &--text {        
+        padding-top: 0;
+        // text-align: center;
+        
+        .heading {
+          @include heading;
+          font-size: 14vw;
+        }
+
+        .paragraph {
+          @include text;
+          font-size: 4.5vw;
+          width: 100%;
+          padding: 5% 0 15% 0;
+          // text-align: left
+        }
+
+        .anchor {
+          @include heading;
+          font-size: 10vw;
+          text-decoration: none;
+          padding-top: 3%;
+        }
+      }
+
+      &--photo {
+        // width: 42vw;
+        // position: absolute;
+        // right: 0;
+        // top: 23%;
+        // transition: all ease-in-out;
+        display: none;
+      }
+    }
+
+    &_skills {
+      padding: 2% 0 0 0;
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      z-index: 1;
+
+      &--text {
+        @include text;
+        font-size: 4.5vw;
+        width: auto;
+        padding-top: 10%;
+
+        .for-computer {
+          display: none;
+        }
+
+        .for-mobile {
+          display: inline;
+        }
+      }
+
+      &--icons {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-auto-rows: minmax(50px, auto);
+        gap: 2rem 1rem;
+      }
+
+      &--icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .img {
+          width: 10vw;
+        }
+
+        p {
+          @include text;
+          font-size: 3vw;
+          padding-top: .5rem;
+        }
+      }
+
+      .unanimated-icon {
+        transform: translate(700px, 0);
+      }
     }
   }
 }

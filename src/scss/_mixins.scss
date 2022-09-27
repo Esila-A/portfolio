@@ -3,7 +3,7 @@
 @mixin heading {
   font-family: $font-heading;
   color: map.get($colors, accent-color);
-  letter-spacing: -.3rem;
+  // letter-spacing: -.3rem;
 }
 
 @mixin text {

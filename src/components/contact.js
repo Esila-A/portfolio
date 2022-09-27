@@ -16,38 +16,68 @@ const Contact = () => {
       <div className="contact_information">
         <div>
           <p className="contact_information--name">Esila Adajewa</p>
-          <div className="contact_information--details">
-            {emailIcon}
-            <p className="contact_information--paragraph">
-              esila.adajewa@gmail.com
-            </p>
+          <div className="for-computer">
+            <div className="contact_information--details">
+              {emailIcon}
+              <p className="contact_information--paragraph">
+                esila.adajewa@gmail.com
+              </p>
+            </div>
+            <div className="contact_information--details">
+              {gitHubIcon}
+              <a
+                href="https://github.com/Esila-A"
+                className="contact_information--link"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub
+              </a>
+            </div>
+            <div className="contact_information--details">
+              {linedInIcon}
+              <a
+                href="https://www.linkedin.com/in/esila-adajewa-567296223/"
+                className="contact_information--link"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn
+              </a>
+            </div>
           </div>
-          <div className="contact_information--details">
-            {gitHubIcon}
-            <a
-              href="https://github.com/Esila-A"
-              className="contact_information--link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              GitHub
-            </a>
-          </div>
-          <div className="contact_information--details">
-            {linedInIcon}
-            <a
-              href="https://www.linkedin.com/in/esila-adajewa-567296223/"
-              className="contact_information--link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              LinedIn
-            </a>
+          <div className="for-mobile">
+            <div className="contact_information--details">
+              <a href="mailto:esila.adajewa@gmail.com?Subject=Some%20subject">
+                {emailIcon}
+              </a>
+            </div>
+            <div className="contact_information--details">
+              <a
+                href="https://github.com/Esila-A"
+                className="contact_information--link"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {gitHubIcon}
+              </a>
+            </div>
+            <div className="contact_information--details">
+              <a
+                href="https://www.linkedin.com/in/esila-adajewa-567296223/"
+                className="contact_information--link"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {linedInIcon}
+              </a>
+            </div>
           </div>
         </div>
+        <Face className="contact_face" />
+
         <Form />
       </div>
-      <Face className="contact_face" />
     </div>
   );
 }
