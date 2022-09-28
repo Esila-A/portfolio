@@ -62,8 +62,8 @@ const About = () => {
           <p className="paragraph">
             My name is Esila Adajewa. I'm a starting front-end developer. I
             enjoy creating clean, minimalistic and user friendly websites. Both
-            designig and writing them are exciting. In free time I enjoy
-            drawing, watching shows on Netflix and spending time with my family.
+            designig and writing them is exciting. In my free time I enjoy
+            drawing, reading books and hanging out with my family and friends.
           </p>
           <a href="#about" id="about" className="anchor">
             SKILLS & TOOLS
@@ -78,20 +78,21 @@ const About = () => {
       </div>
       <div className="about_skills">
         <p className="about_skills--text">
-          My skills and tools are made up of those listed <span className="for-computer">beside</span>
-          <span className="for-mobile">above</span>. As I am only a few months
-          into my programming adventure, in all honesty, my level of knowledge
-          and experience are not very high. However, I have used these skills
-          and tools during and after my fornt-end developer bootcamp at
-          CodersLab IT School, so I know that I am able to learn and develop
-          them.
+          Even though I am only a few months into my programming adventure, I am
+          quickly learning and advancing my skills and set of tools, which you
+          can see listed <span className="for-computer">beside</span>
+          <span className="for-mobile">above</span>. All of them, except for
+          Firebase and Scrum, are used by me on a daily basis.
           <br />
           <br />
-          All of them, except Firebase and Scrum, are used by me on daily basis.
-          Firebase I only used twice, for my two bootcamp projects.
-          <br /><br/>
-          As for Scrum, we had a week dedicated to this methodology where we had
-          to work in a group on one project using it.
+          Firebase I've only used twice, for my two bootcamp projects. As for
+          Scrum, we had a week dedicated to this methodology where we had to
+          work on a group project using it.
+          <br />
+          <br />
+          I am also expanding my knowledge and skills of designing
+          websites - from things like colors and fonts, all the way to overall
+          composition and user experience.
         </p>
         <div className="about_skills--icons icons" id="icons">
           <div className="about_skills--icon unanimated-icon iteration-one">

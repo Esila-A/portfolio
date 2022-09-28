@@ -7,7 +7,7 @@ import "./scss/main.scss";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
+  <BrowserRouter basename='/portfolio'>
     <App />
   </BrowserRouter>
 );

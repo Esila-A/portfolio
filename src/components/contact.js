@@ -75,7 +75,6 @@ const Contact = () => {
           </div>
         </div>
         <Face className="contact_face" />
-
         <Form />
       </div>
     </div>
