@@ -7,10 +7,7 @@ const MobileNav = () => {
   const [icon, setIcon] = useState(false);
 
   const openIcon = <FiMenu className="icon" onClick={() => setIcon(!icon)} />;
-
-  const closeIcon = (
-    <IoMdClose className="icon icon--close" onClick={() => setIcon(!icon)} />
-  );
+  const closeIcon = <IoMdClose className="icon icon--close" onClick={() => setIcon(!icon)} />;
 
   const closeMenu = () => setIcon(false);
 

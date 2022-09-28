@@ -26,27 +26,6 @@
 
 @media (max-width: 792px) {
   .footer {
-    // margin: 0 4.8vw 1% 4.8vw;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
-
-    // &_copyright {
-    //   @include text;
-    //   font-size: 2vw;
-    //   padding-bottom: 1%;
-    // }
-
-    // &_links {
-    //   display: flex;
-    //   gap: 1vw;
-
-    //   &--icon {
-    //     color: map.get($colors, accent-color);
-    //     font-size: 2w;
-    //   }
-    // }
     display: none;
   }
 }

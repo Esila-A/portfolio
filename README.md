@@ -21,6 +21,7 @@ Sass (1.54.0)<br/>
 React (18.1.0)<br/>
 React Router (6.3.0)<br/>
 EmailJS (3.6.2)<br/>
+React Google Recaptcha V3 (1.9.7)<br/>
 
 ### The project status
 Done with its development. Website available on [https://esila-a.github.io/portfolio/](https://esila-a.github.io/portfolio/)
