@@ -21,11 +21,16 @@ const Work = () => {
             <br />
             and an amateur digital artist
           </p>
+          <div className="for-mobile">
+            <Face />
+          </div>
           <a href="#work" id="work" className="anchor">
             SELECTED WORKS
           </a>
         </div>
-        <Face />
+        <div className="for-desktop">
+          <Face />
+        </div>
       </div>
 
       <div className="work_websites">

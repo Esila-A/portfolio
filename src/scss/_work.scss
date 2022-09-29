@@ -27,6 +27,10 @@
         padding-top: 4%;
       }
     }
+
+    .for-mobile {
+      display: none;
+    }
   }
 
   &_websites {
@@ -203,7 +207,7 @@
 
 @media (max-width: 792px) {
   .work {
-    padding: 30% 4.8vw 0 4.8vw;
+    padding: 10% 4.8vw 0 4.8vw;
 
     &_main {
       display: block;
@@ -217,13 +221,18 @@
 
         .paragraph {
           font-size: 5.5vw;
-          padding-bottom: 45%;
+          padding-bottom: 30%;
         }
 
         .anchor {
           font-size: 10vw;
           padding-top: 8%;
         }
+      }
+
+      .for-mobile {
+        display: block;
+        margin-bottom: 20%;
       }
     }
 
@@ -290,8 +299,99 @@
       flex-direction: column-reverse;
     }
 
-    .animation {
+    .for-desktop {
       display: none;
+    }
+
+    .animation {
+      animation: circle 18s ease-in-out infinite alternate;
+      position: relative;
+      left: 20%;
+
+      @keyframes circle {
+        @for $i from 1 through 20 {
+          #{($i *10%)} {
+            transform: translate3d((random(5) * 10px), (random(5) * 10px), (random(5) * 10px));
+          }
+        }
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: calc(100% - (50% + 27vw));
+        top: calc(100% - (50% + 0.75rem));
+        border-radius: 50%;
+        width: 12vw;
+        height: 1rem;
+        border-left: .4rem solid transparent;
+        border-bottom: .4rem solid black;
+        border-right: .4rem solid transparent;
+        transform: rotate(-10deg);
+        background-color: transparent;
+      }
+
+      .face {
+        position: relative;
+        width: calc(100vw / 2.1);
+        height: calc(100vw / 2.1);
+        border-radius: 50%;
+        background: map.get($colors, accent-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: rotate(-10deg);
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 37%;
+          left: 24%;
+          width: calc(100vw / 23);
+          height: calc(100vw / 23);
+          background: rgb(255, 255, 255);
+          border-radius: 50%;
+        }
+
+        &:before {
+          content: "";
+          position: absolute;
+          top:37%;
+          left: 78%;
+          width: calc(100vw / 23);
+          height: calc(100vw / 23);
+          background: rgb(255, 255, 255);
+          border-radius: 50%;
+          z-index: 1;
+        }
+
+        .eyes {
+          position: relative;
+          top: -10px;
+          display: flex;
+
+          .eye {
+            position: relative;
+            width: calc(100vw / 8.5);
+            height: calc(100vw / 8.5);
+            display: block;
+            background: #fff;
+            margin: 0 7vw;
+            border-radius: 50%;
+
+            &:after {
+              content: "";
+              position: absolute;
+              width: calc(100vw / 10.5);
+              height: calc(100vw / 10.5);
+              background: rgb(0, 0, 0);
+              border-radius: 50%;
+              left: 6%;
+              top: 6%;
+            }
+          }
+        }
+      }
     }
   }
 }
