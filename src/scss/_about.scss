@@ -27,12 +27,16 @@
       }
     }
 
-    &--photo {
+    &--photo-desk {
       width: 42vw;
       position: absolute;
       right: 0;
       top: 9%;
       transition: all ease-in-out;
+    }
+
+    &--photo-mob {
+      display: none;
     }
   }
 
@@ -84,7 +88,7 @@
   }
 
     @media (max-width: 792px) {
-      padding: 3% 4.8vw 10% 4.8vw;
+      padding: 0 4.8vw 10% 4.8vw;
 
       &_main {
       flex-direction: column;
@@ -109,19 +113,27 @@
         }
       }
 
-      &--photo {
+      &--photo-desk {
         display: none;
+      }
+
+      &--photo-mob {
+        display: block;
+        width: 60vw;
+        margin-bottom: 4vh;
+        margin-left: auto;
+        margin-right: auto;
       }
     }
 
     &_skills {
-      padding: 2% 0 0 0;
+      padding: 10% 0 0 0;
       flex-direction: column-reverse;
 
       &--text {
         font-size: 4.5vw;
         width: auto;
-        padding-top: 10%;
+        padding-top: 15%;
 
         .for-computer {
           display: none;

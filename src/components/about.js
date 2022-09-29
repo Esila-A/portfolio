@@ -1,4 +1,5 @@
-import photo from "../images/Kima.png";
+import photoDesktop from "../images/Kima.png";
+import photoMobile from "../images/kima mini.png";
 import html from "../images/html.png";
 import css from "../images/css.png";
 import js from "../images/js.png";
@@ -58,6 +59,11 @@ const About = () => {
     <div className="about">
       <div className="about_main">
         <div className="about_main--text">
+          <img
+            src={photoMobile}
+            className="about_main--photo-mob"
+            alt="profile photo"
+          />
           <h1 className="heading">WHO AM I?</h1>
           <p className="paragraph">
             My name is Esila Adajewa. I'm a starting front-end developer. I
@@ -70,8 +76,8 @@ const About = () => {
           </a>
         </div>
         <img
-          src={photo}
-          className="about_main--photo"
+          src={photoDesktop}
+          className="about_main--photo-desk"
           id="photo"
           alt="profile photo"
         />
@@ -85,12 +91,11 @@ const About = () => {
           Firebase and Scrum, are used by me on a daily basis.
           <br />
           <br />
-          Firebase I've only used twice, for my two bootcamp projects. As for
-          Scrum, we had a week dedicated to this methodology where we had to
-          work on a group project using it.
+          I've used Firebase a few times for my bootcamp projects and I'm
+          familiar with Scrum methology, as we had to do a group project using
+          it.
           <br />
-          <br />
-          I am also expanding my knowledge and skills of designing
+          <br />I am also expanding my knowledge and skills of designing
           websites - from things like colors and fonts, all the way to overall
           composition and user experience.
         </p>

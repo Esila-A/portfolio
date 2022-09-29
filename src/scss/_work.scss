@@ -203,7 +203,7 @@
 
 @media (max-width: 792px) {
   .work {
-    padding: 10% 4.8vw 0 4.8vw;
+    padding: 30% 4.8vw 0 4.8vw;
 
     &_main {
       display: block;
@@ -212,11 +212,12 @@
 
       &--text {
         .heading {
-          font-size: 14vw;
+          font-size: 16vw;
         }
 
         .paragraph {
           font-size: 5.5vw;
+          padding-bottom: 45%;
         }
 
         .anchor {

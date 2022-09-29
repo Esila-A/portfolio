@@ -57,7 +57,7 @@ const Form = () => {
     send(
       "service_slhxw1s",
       "template_iw2jkro",
-      form.current,
+      form,
       "08HHrMqkP6n8zMnCe"
     )
       .then(() => {
