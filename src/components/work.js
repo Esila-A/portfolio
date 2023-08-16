@@ -91,11 +91,10 @@ const Work = () => {
           <p className="mini-description">Renovation and finishing</p>
           <h4>About</h4>
           <p className="about-website">
-            This website is for my second real client. I was yet again tasked
-            with not only coding the website, but creating the design and doing
-            the copywriting. The main thing I learned with this project was
+            This website is for my second real client. I was tasked
+            with designing and coding it and the copywriting. The main thing I learned with this project was
             conducting the necessary reaserch and the communication with
-            challenging clients.
+            challenging clients. The firm has since closed so I moved the website to gh-pages.
           </p>
           <div className="technologies-and-links">
             <div className="technologies">
@@ -107,7 +106,7 @@ const Work = () => {
             </div>
             <div>
               <a
-                href="https://github.com/Esila-A/serlo-website-2"
+                href="https://github.com/Esila-A/serlo-website"
                 className="links"
                 target="_blank"
                 rel="noreferrer"
@@ -115,7 +114,7 @@ const Work = () => {
                 GitHub
               </a>
               <a
-                href="https://serlo.pl/"
+                href="https://esila-a.github.io/serlo-website/"
                 className="links"
                 target="_blank"
                 rel="noreferrer"
