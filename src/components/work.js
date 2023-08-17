@@ -85,7 +85,7 @@ const Work = () => {
       </div>
       <div className="work_websites reverse">
         <div className="work_websites--info">
-          <a href="https://serlo.pl/" target="_blank" rel="noreferrer">
+          <a href="https://esila-a.github.io/serlo-website/" target="_blank" rel="noreferrer">
             SERLO
           </a>
           <p className="mini-description">Renovation and finishing</p>
